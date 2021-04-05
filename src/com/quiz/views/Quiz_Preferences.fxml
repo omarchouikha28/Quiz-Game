@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #745D5C;" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quiz.controllers.QuizPreferencesController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="369.0" prefWidth="800.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#daaf65" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose quiz topic" />
+            <ChoiceBox fx:id="quiz_pref_topic" prefWidth="150.0" styleClass="pick-button" stylesheets="@UI-theme.css" />
+            <Text fill="#daaf65" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose number of questions">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></Text>
+            <Spinner fx:id="quiz_pref_num_questions" editable="true" />
+            <Button mnemonicParsing="false" onAction="#startGame" prefHeight="32.0" prefWidth="88.0" styleClass="pick-button" stylesheets="@UI-theme.css" text="Start">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="-40.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="100.0" />
+         </BorderPane.margin>
+         <children>
+            <HBox prefHeight="104.0" prefWidth="48.0" />
+            <Text fill="#daaf65" strokeType="OUTSIDE" strokeWidth="0.0" text="Quiz Me" textAlignment="CENTER" wrappingWidth="327.30078125">
+               <font>
+                  <Font size="78.0" />
+               </font>
+            </Text>
+            <HBox alignment="CENTER_LEFT" prefHeight="104.0" prefWidth="116.0">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IMGBIN_brain-drawing-thought-png_JhqZ8Kz6.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

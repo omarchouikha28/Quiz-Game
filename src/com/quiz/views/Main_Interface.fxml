@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #6C5150;" stylesheets="@UI-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quiz.controllers.MainInterfaceController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1099.0" layoutX="-5.0" opacity="0.1" pickOnBounds="true">
+         <image>
+            <Image url="@../res/bg_pattern.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="59.0" layoutY="484.0" prefHeight="126.0" prefWidth="440.0" spacing="30.0">
+         <children>
+            <Button fx:id="answerA" mnemonicParsing="false" onAction="#setButtonColorOnClick" prefHeight="44.0" prefWidth="439.0" styleClass="answer-button" text="Answer A">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Marlett" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="answerC" mnemonicParsing="false" onAction="#setButtonColorOnClick" prefHeight="44.0" prefWidth="439.0" styleClass="answer-button" text="Answer C">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Marlett" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="180.0" fitWidth="197.0" layoutX="447.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" styleClass="glyph-icon">
+         <image>
+            <Image url="@IMGBIN_brain-drawing-png_39x8QGSe.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="583.0" layoutY="484.0" prefHeight="126.0" prefWidth="440.0" spacing="30.0">
+         <children>
+            <Button fx:id="answerB" mnemonicParsing="false" onAction="#setButtonColorOnClick" prefHeight="44.0" prefWidth="439.0" styleClass="answer-button" text="Answer B">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Marlett" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="answerD" mnemonicParsing="false" onAction="#setButtonColorOnClick" prefHeight="44.0" prefWidth="439.0" styleClass="answer-button" text="Answer D">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Marlett" size="23.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="-3.0" layoutY="660.0" opacity="0.9" prefHeight="60.0" prefWidth="1087.0" style="-fx-background-color: #4f3636;">
+         <children>
+            <Button fx:id="nextSceneButton" layoutX="980.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClick" prefHeight="33.0" prefWidth="79.0" style="-fx-text-fill: #A94646;" styleClass="pick-button" text="Next">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <HBox layoutX="14.0" layoutY="20.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="161.0" text=" Current Question :" textFill="#daaf65">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="QuestionCounter" styleClass="text" text="1" textAlignment="CENTER">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="total" styleClass="text" text=" / total" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ProgressBar fx:id="timeProgressBar" layoutX="356.0" layoutY="28.0" maxHeight="17.0" minHeight="10.0" prefHeight="5.0" prefWidth="490.0" progress="1.0" style="-fx-border-width: 1; -fx-background-color: #D0A764; -fx-accent: #D0A764;" />
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="934.0" layoutY="76.71428680419922" spacing="20.0">
+         <children>
+            <VBox>
+               <children>
+                  <FontAwesomeIconView fx:id="muteButton" glyphName="VOLUME_UP" onMouseClicked="#muted" size="40" styleClass="glyph-icon" textAlignment="CENTER" wrappingWidth="33.99070566892624">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+                  <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="17.0" prefWidth="36.0" text="Mute" textAlignment="CENTER" textFill="#daaf65" />
+               </children>
+            </VBox>
+            <VBox fx:id="hintButton" alignment="TOP_CENTER" onMouseClicked="#hintButtonClicked">
+               <children>
+                  <FontAwesomeIconView glyphName="QUESTION" size="40" styleClass="glyph-icon" textAlignment="CENTER" wrappingWidth="35.99070566892624">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontAwesomeIconView>
+                  <Label fx:id="hintButtonText" alignment="CENTER" contentDisplay="BOTTOM" minWidth="50.0" text="Hint" textFill="#daaf65" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="2.0" layoutY="322.0" prefHeight="140.0" prefWidth="1080.0">
+         <children>
+            <Label fx:id="currentQuestion" alignment="CENTER" maxWidth="1080.0" text="Question" textAlignment="CENTER" textFill="#daaf65" wrapText="true">
+               <font>
+                  <Font size="49.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="-2.0" opacity="0.9" prefHeight="60.0" prefWidth="1087.0" style="-fx-background-color: #4f3636;">
+         <children>
+            <HBox layoutX="14.0" layoutY="20.0" />
+         </children>
+      </AnchorPane>
+      <Text fx:id="warningText" fill="#daaf65" fontSmoothingType="LCD" layoutX="766.0" layoutY="654.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="268.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

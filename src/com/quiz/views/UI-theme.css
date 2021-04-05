@@ -1,0 +1,42 @@
+.root{
+    -fx-background-color: #F5F5F5;
+}
+.glyph-icon{
+    -fx-fill:   #daaf65;
+}
+.button{
+    -fx-text-fill: #38687a;
+}
+
+.help-button{
+                -fx-background-color: #ff0000;
+                -fx-text-fill: #fffaf0;
+                -fx-border-radius: 20px;
+                -fx-background-radius: 20px;
+ }
+
+.answer-button{
+    -fx-border-color: #daaf65;
+    -fx-text-fill: #E86662;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.answer-button:hover{
+    -fx-border-color:  #daaf65; 
+    -fx-background-color: #E6C997;
+}
+.pick-button{
+    -fx-border-color: #daaf65;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.pick-button:hover{
+    -fx-border-color:  #daaf65; 
+}
+.text-field{
+    -fx-font-size: 35pt;
+    -fx-focus-color: #cd9536;
+}
+.text{
+	-fx-text-fill: #daaf65;
+}
